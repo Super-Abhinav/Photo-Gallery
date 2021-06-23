@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Akronim&display=swap" rel="stylesheet">
+    <title>Photo Gallery</title>
+</head>
+
+<body>
+    <script>
+        function myFunction() {
+            var elem = document.documentElement;
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.webkitRequestFullscreen) {
+                /* Safari */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) {
+                /* IE11 */
+                elem.msRequestFullscreen();
+            }
+            var x = document.getElementById("mbutton");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                var y = document.getElementById("mybutton");
+                y.style.display = "none";
+            } else {
+                x.style.display = "none";
+                y.style.display = "block";
+            }
+
+        }
+
+        function myunction() {
+            var elem = document.documentElement;
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.webkitExitFullscreen) {
+                /* Safari */
+                document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) {
+                /* IE11 */
+                document.msExitFullscreen();
+            }
+            var y = document.getElementById("mybutton");
+            if (y.style.display === "none") {
+                y.style.display = "block";
+                var x = document.getElementById("mbutton");
+                x.style.display = "none";
+            } else {
+                y.style.display = "none";
+                x.style.display = "block";
+            }
+
+        }
+    </script>
+
+    <body onload="myFunction()">
+        <center>
+            <ul class="menu">
+                <li class="links"><a href="#Home">Home</a></li>
+                <li class="links"><a href="#Grid_view">Grid View</a></li>
+                <li class="links"><a href="#slide">Slide View</a></li>
+            </ul>
+        </center><br><br>
+
+        <section id="Home">
+            <div><img id="j" src="flowers.gif"></div>
+            <h1 id="helo">Welcome to my amazing<br><span id="name"> Photo Gallery</span></h1><br>
+        </section>
+        <div id="mybutton">
+            <button id="FS" class="feedback" onclick="myFunction()">Open Full Screen</button>
+        </div>
+        <div id="mbutton">
+            <button onclick="myunction()" id="ES" class="back">Exit Full Screen</button>
+        </div>
+        <section id="Grid_view">
+            <br>
+            <hr style="width:40%">
+            <h2 id="h"> Grid Gallery </h2>
+            <hr style="width:10%"> <br>
+            <div class="row"> <img src=blue.jpg />&nbsp;&nbsp; <img src="Orange.png" />&nbsp;&nbsp; <img src="Pink%20tulip.jpg" />&nbsp;&nbsp; <img src="purple.jpg" />&nbsp;&nbsp; </div><br>
+            <div class="row"> <img src="Red%20rose.jpg" />&nbsp;&nbsp; <img src="violet.jpg" />&nbsp;&nbsp; <img src="White.jpg" />&nbsp;&nbsp; <img src="yellow.jpg" />&nbsp;&nbsp;<br><br><br><br> </div>
+        </section>
+        <section id="slide"><br>
+            <hr style="width:40%">
+            <h2 id="h">Slide Gallery</h2>
+            <hr style="width:10%">
+            <div id="myCarousel" class="carousel slide" data-interval="2000">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <center>
+                            <a target="_blank"> <img class="img-responsive" src="blue.jpg"></a>
+                            <div class="carousel-content"></div>
+                            <div class="carousel-caption">
+                                <h3>Blue Flower</h3>
+                            </div>
+                        </center>
+                    </div>
+                    <div class="item">
+                        <center>
+                            <a href="#" target="_blank">
+                                <img class="img-responsive" src="Orange.png">
+                            </a>
+                            <div class="carousel-content">
+
+                            </div>
+                            <div class="carousel-caption">
+                                <h3>Orange Flower</h3>
+                            </div>
+                        </center>
+                    </div>
+                    <div class="item">
+                        <center>
+                            <a href="#" target="_blank">
+                                <img class="img-responsive" src="Pink%20tulip.jpg">
+                            </a>
+                            <div class="carousel-content">
+
+                            </div>
+                            <div class="carousel-caption">
+                                <h3>Pink Tulip</h3>
+                            </div>
+                        </center>
+
+
+                    </div>
+                    <div class="item">
+                        <center>
+                            <a href="#" target="_blank">
+                                <img class="img-responsive" src="purple.jpg">
+                            </a>
+                            <div class="carousel-content">
+
+                            </div>
+                            <div class="carousel-caption">
+                                <h3>Purple Flower</h3>
+                            </div>
+                        </center>
+
+
+                    </div>
+                    <div class="item">
+                        <center>
+                            <a href="#" target="_blank">
+                                <img class="img-responsive" src="Red%20rose.jpg">
+                            </a>
+                            <div class="carousel-content">
+
+                            </div>
+                            <div class="carousel-caption">
+                                <h3>Red Rose</h3>
+                            </div>
+                        </center>
+
+
+                    </div>
+                    <div class="item">
+                        <center>
+                            <a href="#" target="_blank">
+                                <img class="img-responsive" src="violet.jpg">
+                            </a>
+                            <div class="carousel-content">
+
+                            </div>
+                            <div class="carousel-caption">
+                                <h3>Violet Flower</h3>
+                            </div>
+                        </center>
+
+
+                    </div>
+                    <div class="item">
+                        <center>
+                            <a href="#" target="_blank">
+                                <img class="img-responsive" src="White.jpg">
+                            </a>
+                            <div class="carousel-content">
+
+                            </div>
+                            <div class="carousel-caption">
+                                <h3>White Flower</h3>
+                            </div>
+                        </center>
+
+
+                    </div>
+                    <div class="item">
+                        <center>
+                            <a href="#" target="_blank">
+                                <img class="img-responsive" src="yellow.jpg">
+                            </a>
+                            <div class="carousel-content">
+
+                            </div>
+                            <div class="carousel-caption">
+                                <h3>Yellow Flower</h3>
+                            </div>
+                        </center>
+
+
+                    </div>
+
+                </div>
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a> <a class="right carousel-control" href="#myCarousel" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a>
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                    <li data-target="#myCarousel" data-slide-to="5"></li>
+                    <li data-target="#myCarousel" data-slide-to="6"></li>
+                    <li data-target="#myCarousel" data-slide-to="7"></li>
+                </ol>
+
+            </div>
+        </section>
+    </body></html>
