@@ -15,6 +15,18 @@
 
 <body>
     <script>
+        function my() {
+            var x = document.getElementById("mbutton");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                var y = document.getElementById("mybutton");
+                y.style.display = "none";
+            } else {
+                x.style.display = "none";
+                y.style.display = "block";
+            }
+
+        }
         function myFunction() {
             var elem = document.documentElement;
             if (elem.requestFullscreen) {
@@ -62,7 +74,7 @@
         }
     </script>
 
-    <body onload="myFunction()">
+    <body onload="my()">
         <center>
             <ul class="menu">
                 <li class="links"><a href="#Home">Home</a></li>
